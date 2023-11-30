@@ -1,0 +1,16 @@
+dataclass-wizard
+lxml
+gspread
+mkdocs
+mkdocs-git-authors-plugin
+mkdocs-git-committers-plugin-2
+mkdocs-git-revision-date-localized-plugin
+mkdocs-glightbox
+mkdocs-material
+mkdocs-material-extensions
+mkdocs-minify-plugin
+mkdocs-redirects
+mkdocs-swagger-ui-tag
+python-dotenv
+pymdown-extensions
+oauth2client

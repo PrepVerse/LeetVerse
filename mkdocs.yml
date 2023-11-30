@@ -1,0 +1,227 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+# Project information
+site_name: LeetVerse
+site_description: LeetCode Solutions in C++, Java, and Python.
+site_author: Akash Singh
+site_url: https://PrepVerse/LeetVerse
+
+# Repository
+repo_name: LeetVerse
+repo_url: https://github.com/PrepVerse/LeetVerse
+edit_uri: ''
+
+# Copyright
+copyright: Copyright &copy; <a href="https://github.com/AkashSingh3031">Akash Singh</a> 2022 - 2023
+
+theme:
+  name: material
+  custom_dir: material/overrides
+  language: en
+  favicon: assets/favicon.png
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    - navigation.path
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  icon:
+    logo: fontawesome/solid/code
+    repo: fontawesome/brands/github
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+  palette:
+    # Light mode
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: white
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: cyan
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Customization
+extra:
+  analytics:
+    provider: google
+    property: G-JF4ZWKWVGC
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AkashSingh3031
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/akashsingh3031
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/akash.singh3031
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/akashsingh3031
+    - icon: fontawesome/solid/laptop-code
+      link: https://prepverse.github.io/CodePoint
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
+
+extra_css:
+  - css/childpages_card_grid.css
+  - css/custom.css
+  - css/extra.css
+  - css/katex.css
+  - css/progressbar.css
+  - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
+extra_javascript:
+  - js/feedback.js
+  - js/katex.js
+  - js/repo_card.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+      block_tag: 'pre'
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.definition
+  - pymdownx.blocks.details
+  - pymdownx.blocks.html
+  - pymdownx.blocks.tab:
+      alternate_style: True
+      combine_header_slug: True
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums_style: pymdownx.table
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      social_url_shorthand: true
+      social_url_shortener: true
+      user: PrepVerse
+      repo: LeetVerse
+  - pymdownx.mark
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Plugins
+plugins:
+  - blog:
+      archive: true
+      archive_name: Articles
+      archive_date_format: yyyy
+      archive_url_date_format: yyyy
+      archive_url_format: "{date}"
+      archive_toc: true
+      authors: true
+      authors_file: "{blog}/.authors.yml"
+      blog_dir: LeetCode_Articles
+      blog_toc: true
+      categories: true
+      categories_name: Labels
+      categories_url_format: "../labels/{slug}"
+      categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      categories_slugify_separator: _
+      categories_toc: true
+      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+      pagination_if_single_page: true
+      pagination_per_page: 10
+      pagination_url_format: "page/{page}"
+      post_dir: "{blog}/articles"
+      # post_dir: "{blog}/Article"
+      post_date_format: long
+      post_excerpt: optional
+      post_excerpt_max_authors: 1
+      post_excerpt_max_categories: 5
+      post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      post_slugify_separator: "-"
+      post_url_date_format: yyyy/MM/dd
+      post_url_format: "{file}"
+      post_url_max_categories: 1
+      post_readtime: true
+      post_readtime_words_per_minute: 250
+  # - minify:
+  #     minify_html: true
+  - search:
+      lang:
+        - en
+  - tags:
+      tags_file: tags.md
+
+nav:
+  - Home: 
+    - index.md
+  - LeetCode Articles: 
+    - LeetCode_Articles/index.md  
